@@ -1,0 +1,7 @@
+02:34:01 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+
+02:34:02 Build Finished. 0 errors, 0 warnings. (took 418ms)
+
