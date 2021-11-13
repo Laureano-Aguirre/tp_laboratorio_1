@@ -1,0 +1,1363 @@
+19:02:23 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+13:39:30 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+13:40:28 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+01:39:38 **** Rebuild of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Aguirre.o "..\\Aguirre.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'buscarIndice':
+..\Controller.c:212:35: warning: comparison between pointer and integer
+  if(pArrayListEmployee!=NULL && id!=NULL && empleado!=NULL)
+                                   ^~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:234:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:237:30: warning: passing argument 1 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getHorasTrabajadas(pArrayListEmployee, &horasTrabajadas);
+                              ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:238:21: warning: passing argument 1 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getSueldo(pArrayListEmployee, &sueldo);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:239:21: warning: passing argument 1 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(pArrayListEmployee, nombre);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+01:40:30 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'buscarIndice':
+..\Controller.c:212:35: warning: comparison between pointer and integer
+  if(pArrayListEmployee!=NULL && id!=NULL && empleado!=NULL)
+                                   ^~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:234:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:237:30: warning: passing argument 1 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getHorasTrabajadas(pArrayListEmployee, horasTrabajadas);
+                              ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:237:50: warning: passing argument 2 of 'employee_getHorasTrabajadas' makes pointer from integer without a cast [-Wint-conversion]
+  employee_getHorasTrabajadas(pArrayListEmployee, horasTrabajadas);
+                                                  ^~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'int *' but argument is of type 'int'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:238:21: warning: passing argument 1 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getSueldo(pArrayListEmployee, sueldo);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:238:41: warning: passing argument 2 of 'employee_getSueldo' makes pointer from integer without a cast [-Wint-conversion]
+  employee_getSueldo(pArrayListEmployee, sueldo);
+                                         ^~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'int *' but argument is of type 'int'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:239:21: warning: passing argument 1 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(pArrayListEmployee, nombre);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+01:40:40 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'buscarIndice':
+..\Controller.c:212:35: warning: comparison between pointer and integer
+  if(pArrayListEmployee!=NULL && id!=NULL && empleado!=NULL)
+                                   ^~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:234:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:237:30: warning: passing argument 1 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getHorasTrabajadas(pArrayListEmployee, &horasTrabajadas);
+                              ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:238:21: warning: passing argument 1 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getSueldo(pArrayListEmployee, &sueldo);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:239:21: warning: passing argument 1 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(pArrayListEmployee, nombre);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+01:40:58 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'buscarIndice':
+..\Controller.c:212:35: warning: comparison between pointer and integer
+  if(pArrayListEmployee!=NULL && id!=NULL && empleado!=NULL)
+                                   ^~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:237:30: warning: passing argument 1 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getHorasTrabajadas(pArrayListEmployee, &horasTrabajadas);
+                              ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:238:21: warning: passing argument 1 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getSueldo(pArrayListEmployee, &sueldo);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:239:21: warning: passing argument 1 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(pArrayListEmployee, nombre);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+01:41:24 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'buscarIndice':
+..\Controller.c:212:35: warning: comparison between pointer and integer
+  if(pArrayListEmployee!=NULL && id!=NULL)
+                                   ^~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:237:30: warning: passing argument 1 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getHorasTrabajadas(pArrayListEmployee, &horasTrabajadas);
+                              ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:238:21: warning: passing argument 1 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getSueldo(pArrayListEmployee, &sueldo);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:239:21: warning: passing argument 1 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(pArrayListEmployee, nombre);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+01:41:36 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:237:30: warning: passing argument 1 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getHorasTrabajadas(pArrayListEmployee, &horasTrabajadas);
+                              ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:238:21: warning: passing argument 1 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getSueldo(pArrayListEmployee, &sueldo);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:239:21: warning: passing argument 1 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(pArrayListEmployee, nombre);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+01:41:44 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:237:30: warning: passing argument 1 of 'employee_getHorasTrabajadas' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getHorasTrabajadas(pArrayListEmployee, &horasTrabajadas);
+                              ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:24:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:238:21: warning: passing argument 1 of 'employee_getSueldo' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getSueldo(pArrayListEmployee, &sueldo);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:27:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getSueldo(Employee* this,int* sueldo);
+     ^~~~~~~~~~~~~~~~~~
+..\Controller.c:239:21: warning: passing argument 1 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(pArrayListEmployee, nombre);
+                     ^~~~~~~~~~~~~~~~~~
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'Employee * {aka struct <anonymous> *}' but argument is of type 'LinkedList * {aka struct LinkedList *}'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+01:51:13 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:236:29: warning: passing argument 1 of 'll_get' from incompatible pointer type [-Wincompatible-pointer-types]
+  empleado=(Employee*)ll_get(empleado, index);
+                             ^~~~~~~~
+In file included from ..\parser.h:14:0,
+                 from ..\Controller.c:5:
+..\LinkedList.h:42:7: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'Employee * {aka struct <anonymous> *}'
+ void* ll_get(LinkedList* this, int index);
+       ^~~~~~
+01:51:21 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:62:7: error: array size missing in 'nombre'
+  char nombre[];
+       ^~~~~~
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+01:51:49 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'controller_editEmployee':
+..\Controller.c:118:7: warning: 'pEmpleado' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       employee_setNombre(pEmpleado, auxNombre);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Controller.o: In function `controller_addEmployee':
+C:\Users\Lau\Desktop\tp3.2\tp3_windows\Debug/../Controller.c:71: undefined reference to `getChar'
+collect2.exe: error: ld returned 1 exit status
+01:54:06 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'controller_editEmployee':
+..\Controller.c:110:21: warning: passing argument 1 of 'll_get' from incompatible pointer type [-Wincompatible-pointer-types]
+    pEmpleado=ll_get(pEmpleado, pos);
+                     ^~~~~~~~~
+In file included from ..\parser.h:14:0,
+                 from ..\Controller.c:5:
+..\LinkedList.h:42:7: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'Employee * {aka struct <anonymous> *}'
+ void* ll_get(LinkedList* this, int index);
+       ^~~~~~
+..\Controller.c:110:13: warning: 'pEmpleado' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    pEmpleado=ll_get(pEmpleado, pos);
+    ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Controller.o: In function `controller_addEmployee':
+C:\Users\Lau\Desktop\tp3.2\tp3_windows\Debug/../Controller.c:71: undefined reference to `getChar'
+collect2.exe: error: ld returned 1 exit status
+01:55:16 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+..\Controller.c: In function 'controller_editEmployee':
+..\Controller.c:118:7: warning: 'pEmpleado' may be used uninitialized in this function [-Wmaybe-uninitialized]
+       employee_setNombre(pEmpleado, auxNombre);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Controller.o: In function `controller_addEmployee':
+C:\Users\Lau\Desktop\tp3.2\tp3_windows\Debug/../Controller.c:71: undefined reference to `getChar'
+collect2.exe: error: ld returned 1 exit status
+01:57:12 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:71:3: warning: implicit declaration of function 'getChar' [-Wimplicit-function-declaration]
+   getChar("\nIngrese el nombre del empleado que desea cargar: ", nombre);
+   ^~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Controller.o: In function `controller_addEmployee':
+C:\Users\Lau\Desktop\tp3.2\tp3_windows\Debug/../Controller.c:71: undefined reference to `getChar'
+collect2.exe: error: ld returned 1 exit status
+01:58:09 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:21:11 **** Rebuild of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:169:64: warning: passing argument 2 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+    getInt("\nIngrese el ID del empleado que desea eliminar: ", id);
+                                                                ^~
+In file included from ..\Employee.h:3:0,
+                 from ..\Controller.c:4:
+..\Aguirre.h:11:6: note: expected 'int *' but argument is of type 'int'
+ void getInt(char* mensaje, int* entero);
+      ^~~~~~
+..\Controller.c:176:59: warning: passing argument 2 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+     getInt("\nDesea eliminar este empleado? 1.si 2.no: ", opcion);
+                                                           ^~~~~~
+In file included from ..\Employee.h:3:0,
+                 from ..\Controller.c:4:
+..\Aguirre.h:11:6: note: expected 'int *' but argument is of type 'int'
+ void getInt(char* mensaje, int* entero);
+      ^~~~~~
+..\Controller.c:157:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_ListEmployee':
+..\Controller.c:219:20: warning: passing argument 1 of 'mostrarEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    mostrarEmpleado(pEmpleado, i);
+                    ^~~~~~~~~
+In file included from ..\Controller.c:6:0:
+..\Controller.h:11:6: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'Employee * {aka struct <anonymous> *}'
+ void mostrarEmpleado(LinkedList* pArrayListEmployee, int index); //ok
+      ^~~~~~~~~~~~~~~
+..\Controller.c:211:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:169:4: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    getInt("\nIngrese el ID del empleado que desea eliminar: ", id);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:176:5: warning: 'opcion' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     getInt("\nDesea eliminar este empleado? 1.si 2.no: ", opcion);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Aguirre.o "..\\Aguirre.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:21:31 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:169:64: warning: passing argument 2 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+    getInt("\nIngrese el ID del empleado que desea eliminar: ", id);
+                                                                ^~
+In file included from ..\Employee.h:3:0,
+                 from ..\Controller.c:4:
+..\Aguirre.h:11:6: note: expected 'int *' but argument is of type 'int'
+ void getInt(char* mensaje, int* entero);
+      ^~~~~~
+..\Controller.c:176:59: warning: passing argument 2 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+     getInt("\nDesea eliminar este empleado? 1.si 2.no: ", opcion);
+                                                           ^~~~~~
+In file included from ..\Employee.h:3:0,
+                 from ..\Controller.c:4:
+..\Aguirre.h:11:6: note: expected 'int *' but argument is of type 'int'
+ void getInt(char* mensaje, int* entero);
+      ^~~~~~
+..\Controller.c: In function 'controller_ListEmployee':
+..\Controller.c:219:20: warning: passing argument 1 of 'mostrarEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    mostrarEmpleado(pEmpleado, i);
+                    ^~~~~~~~~
+In file included from ..\Controller.c:6:0:
+..\Controller.h:11:6: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'Employee * {aka struct <anonymous> *}'
+ void mostrarEmpleado(LinkedList* pArrayListEmployee, int index); //ok
+      ^~~~~~~~~~~~~~~
+..\Controller.c:211:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:169:4: warning: 'id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    getInt("\nIngrese el ID del empleado que desea eliminar: ", id);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:176:5: warning: 'opcion' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     getInt("\nDesea eliminar este empleado? 1.si 2.no: ", opcion);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:21:45 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:176:59: warning: passing argument 2 of 'getInt' makes pointer from integer without a cast [-Wint-conversion]
+     getInt("\nDesea eliminar este empleado? 1.si 2.no: ", opcion);
+                                                           ^~~~~~
+In file included from ..\Employee.h:3:0,
+                 from ..\Controller.c:4:
+..\Aguirre.h:11:6: note: expected 'int *' but argument is of type 'int'
+ void getInt(char* mensaje, int* entero);
+      ^~~~~~
+..\Controller.c: In function 'controller_ListEmployee':
+..\Controller.c:219:20: warning: passing argument 1 of 'mostrarEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    mostrarEmpleado(pEmpleado, i);
+                    ^~~~~~~~~
+In file included from ..\Controller.c:6:0:
+..\Controller.h:11:6: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'Employee * {aka struct <anonymous> *}'
+ void mostrarEmpleado(LinkedList* pArrayListEmployee, int index); //ok
+      ^~~~~~~~~~~~~~~
+..\Controller.c:211:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:176:5: warning: 'opcion' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     getInt("\nDesea eliminar este empleado? 1.si 2.no: ", opcion);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:26:12 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_ListEmployee':
+..\Controller.c:219:20: warning: passing argument 1 of 'mostrarEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    mostrarEmpleado(pEmpleado, i);
+                    ^~~~~~~~~
+In file included from ..\Controller.c:6:0:
+..\Controller.h:11:6: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'Employee * {aka struct <anonymous> *}'
+ void mostrarEmpleado(LinkedList* pArrayListEmployee, int index); //ok
+      ^~~~~~~~~~~~~~~
+..\Controller.c:211:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  int retorno=-1;
+      ^~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:26:26 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_ListEmployee':
+..\Controller.c:219:20: warning: passing argument 1 of 'mostrarEmpleado' from incompatible pointer type [-Wincompatible-pointer-types]
+    mostrarEmpleado(pEmpleado, i);
+                    ^~~~~~~~~
+In file included from ..\Controller.c:6:0:
+..\Controller.h:11:6: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'Employee * {aka struct <anonymous> *}'
+ void mostrarEmpleado(LinkedList* pArrayListEmployee, int index); //ok
+      ^~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:26:55 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_ListEmployee':
+..\Controller.c:212:12: warning: variable 'pEmpleado' set but not used [-Wunused-but-set-variable]
+  Employee* pEmpleado;
+            ^~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:28:44 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:30:27 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+15:33:54 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:35:08 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:64:14: error: 'else3' undeclared (first use in this function)
+              else3
+              ^~~~~
+..\main.c:64:14: note: each undeclared identifier is reported only once for each function it appears in
+..\main.c:65:14: error: expected ';' before '{' token
+              {
+              ^
+15:35:22 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+15:40:54 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_newParametrosString':
+..\Employee.c:32:55: warning: comparison of constant '-1' with boolean expression is always false [-Wbool-compare]
+    employee_setSueldo(nuevoEmpleado, atoi(sueldoStr)))==-1)
+                                                       ^~
+..\Employee.c:32:55: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:44:20 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+15:46:26 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:295:31: warning: passing argument 2 of 'employee_getNombre' from incompatible pointer type [-Wincompatible-pointer-types]
+  employee_getNombre(empleado, &nombre);
+                               ^
+In file included from ..\Controller.c:4:0:
+..\Employee.h:21:5: note: expected 'char *' but argument is of type 'char (*)[128]'
+ int employee_getNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:47:36 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:48:18 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+15:53:39 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_setNombre':
+..\Employee.c:75:10: warning: passing argument 1 of 'strcpy' makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(nombre[128], this->nombre);
+          ^~~~~~
+In file included from ..\Employee.c:3:0:
+c:\mingw\include\string.h:79:40: note: expected 'char *' but argument is of type 'char'
+ _CRTIMP __cdecl __MINGW_NOTHROW  char *strcpy (char *, const char *);
+                                        ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+15:54:19 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_setNombre':
+..\Employee.c:75:3: error: too many arguments to function 'strcpy'
+   strcpy(this->nombre, nombre, 128);
+   ^~~~~~
+In file included from ..\Employee.c:3:0:
+c:\mingw\include\string.h:79:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  char *strcpy (char *, const char *);
+                                        ^~~~~~
+15:54:44 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+15:55:51 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+15:57:30 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_setNombre':
+..\Employee.c:75:3: error: too few arguments to function 'strncpy'
+   strncpy(this->nombre, nombre);
+   ^~~~~~~
+In file included from ..\Employee.c:3:0:
+c:\mingw\include\string.h:86:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+                                        ^~~~~~~
+..\Employee.c: In function 'employee_getNombre':
+..\Employee.c:123:3: error: too few arguments to function 'strncpy'
+   strncpy(nombre, this->nombre);
+   ^~~~~~~
+In file included from ..\Employee.c:3:0:
+c:\mingw\include\string.h:86:40: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+                                        ^~~~~~~
+15:57:50 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+16:10:16 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file tp3_windows.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:10:21 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+16:17:27 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file tp3_windows.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:17:31 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+16:18:29 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+16:19:57 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file tp3_windows.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:20:00 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+16:37:15 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+18:12:06 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:55:29: error: incompatible type for argument 1 of 'parser_EmployeeFromBinary'
+   parser_EmployeeFromBinary(pArchivo, pArrayListEmployee);
+                             ^~~~~~~~
+In file included from ..\Controller.c:5:0:
+..\parser.h:30:5: note: expected 'FILE {aka struct _iobuf}' but argument is of type 'FILE * {aka struct _iobuf *}'
+ int parser_EmployeeFromBinary(FILE pFile , LinkedList* pArrayListEmployee);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:266:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:265:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\Controller.c: In function 'controller_saveAsBinary':
+..\Controller.c:294:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:293:6: warning: unused variable 'cant' [-Wunused-variable]
+  int cant;
+      ^~~~
+..\Controller.c:292:7: warning: unused variable 'nombre' [-Wunused-variable]
+  char nombre[128];
+       ^~~~~~
+..\Controller.c:291:6: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+  int horasTrabajadas;
+      ^~~~~~~~~~~~~~~
+..\Controller.c:290:6: warning: unused variable 'sueldo' [-Wunused-variable]
+  int sueldo;
+      ^~~~~~
+..\Controller.c:289:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:288:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+18:13:29 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinaryW':
+..\parser.c:65:38: warning: passing argument 2 of 'employee_getHorasTrabajadas' makes pointer from integer without a cast [-Wint-conversion]
+     employee_getHorasTrabajadas(aux, horasTrabajadas);
+                                      ^~~~~~~~~~~~~~~
+In file included from ..\parser.c:4:0:
+..\Employee.h:24:5: note: expected 'int *' but argument is of type 'int'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\parser.c: In function 'parser_EmployeeFromTextW':
+..\parser.c:95:38: warning: passing argument 2 of 'employee_getHorasTrabajadas' makes pointer from integer without a cast [-Wint-conversion]
+     employee_getHorasTrabajadas(aux, horasTrabajadas);
+                                      ^~~~~~~~~~~~~~~
+In file included from ..\parser.c:4:0:
+..\Employee.h:24:5: note: expected 'int *' but argument is of type 'int'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:119:10: error: invalid operands to binary != (have 'FILE {aka struct _iobuf}' and 'void *')
+  if(pFile!=NULL && pArrayListEmployee!=NULL)
+          ^~
+In file included from ..\parser.c:1:0:
+..\parser.c:121:10: error: invalid type argument of '->' (have 'FILE {aka struct _iobuf}')
+   while(!feof(pFile))//hasta q no lea la ultima linea, no sale del while
+          ^
+..\parser.c:123:21: error: incompatible type for argument 1 of 'fscanf'
+    cantidad= fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                     ^~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:666:41: note: expected 'FILE * {aka struct _iobuf *}' but argument is of type 'FILE {aka struct _iobuf}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    fscanf (FILE *, const char *, ...);
+                                         ^~~~~~
+18:20:07 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromTextW':
+..\parser.c:95:38: warning: passing argument 2 of 'employee_getHorasTrabajadas' makes pointer from integer without a cast [-Wint-conversion]
+     employee_getHorasTrabajadas(aux, horasTrabajadas);
+                                      ^~~~~~~~~~~~~~~
+In file included from ..\parser.c:4:0:
+..\Employee.h:24:5: note: expected 'int *' but argument is of type 'int'
+ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:119:10: error: invalid operands to binary != (have 'FILE {aka struct _iobuf}' and 'void *')
+  if(pFile!=NULL && pArrayListEmployee!=NULL)
+          ^~
+In file included from ..\parser.c:1:0:
+..\parser.c:121:10: error: invalid type argument of '->' (have 'FILE {aka struct _iobuf}')
+   while(!feof(pFile))//hasta q no lea la ultima linea, no sale del while
+          ^
+..\parser.c:123:21: error: incompatible type for argument 1 of 'fscanf'
+    cantidad= fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                     ^~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:666:41: note: expected 'FILE * {aka struct _iobuf *}' but argument is of type 'FILE {aka struct _iobuf}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    fscanf (FILE *, const char *, ...);
+                                         ^~~~~~
+18:20:15 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:119:10: error: invalid operands to binary != (have 'FILE {aka struct _iobuf}' and 'void *')
+  if(pFile!=NULL && pArrayListEmployee!=NULL)
+          ^~
+In file included from ..\parser.c:1:0:
+..\parser.c:121:10: error: invalid type argument of '->' (have 'FILE {aka struct _iobuf}')
+   while(!feof(pFile))//hasta q no lea la ultima linea, no sale del while
+          ^
+..\parser.c:123:21: error: incompatible type for argument 1 of 'fscanf'
+    cantidad= fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                     ^~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:666:41: note: expected 'FILE * {aka struct _iobuf *}' but argument is of type 'FILE {aka struct _iobuf}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    fscanf (FILE *, const char *, ...);
+                                         ^~~~~~
+18:20:40 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:119:10: error: invalid operands to binary != (have 'FILE {aka struct _iobuf}' and 'void *')
+  if(pFile!=NULL && pArrayListEmployee!=NULL)
+          ^~
+In file included from ..\parser.c:1:0:
+..\parser.c:121:10: error: invalid type argument of '->' (have 'FILE {aka struct _iobuf}')
+   while(!feof(pFile))//hasta q no lea la ultima linea, no sale del while
+          ^
+..\parser.c:123:21: error: incompatible type for argument 1 of 'fscanf'
+    cantidad= fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                     ^~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:666:41: note: expected 'FILE * {aka struct _iobuf *}' but argument is of type 'FILE {aka struct _iobuf}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    fscanf (FILE *, const char *, ...);
+                                         ^~~~~~
+18:21:11 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:56:37: error: incompatible type for argument 1 of 'parser_EmployeeFromBinary'
+   retorno=parser_EmployeeFromBinary(pArchivo, pArrayListEmployee);
+                                     ^~~~~~~~
+In file included from ..\Controller.c:5:0:
+..\parser.h:30:5: note: expected 'FILE {aka struct _iobuf}' but argument is of type 'FILE * {aka struct _iobuf *}'
+ int parser_EmployeeFromBinary(FILE pFile , LinkedList* pArrayListEmployee);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:48:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:267:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:266:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\Controller.c: In function 'controller_saveAsBinary':
+..\Controller.c:295:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:294:6: warning: unused variable 'cant' [-Wunused-variable]
+  int cant;
+      ^~~~
+..\Controller.c:293:7: warning: unused variable 'nombre' [-Wunused-variable]
+  char nombre[128];
+       ^~~~~~
+..\Controller.c:292:6: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+  int horasTrabajadas;
+      ^~~~~~~~~~~~~~~
+..\Controller.c:291:6: warning: unused variable 'sueldo' [-Wunused-variable]
+  int sueldo;
+      ^~~~~~
+..\Controller.c:290:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:289:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+18:22:37 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:56:29: error: incompatible type for argument 1 of 'parser_EmployeeFromBinary'
+   parser_EmployeeFromBinary(pArchivo, pArrayListEmployee);
+                             ^~~~~~~~
+In file included from ..\Controller.c:5:0:
+..\parser.h:30:5: note: expected 'FILE {aka struct _iobuf}' but argument is of type 'FILE * {aka struct _iobuf *}'
+ int parser_EmployeeFromBinary(FILE pFile , LinkedList* pArrayListEmployee);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:48:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:267:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:266:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\Controller.c: In function 'controller_saveAsBinary':
+..\Controller.c:295:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:294:6: warning: unused variable 'cant' [-Wunused-variable]
+  int cant;
+      ^~~~
+..\Controller.c:293:7: warning: unused variable 'nombre' [-Wunused-variable]
+  char nombre[128];
+       ^~~~~~
+..\Controller.c:292:6: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+  int horasTrabajadas;
+      ^~~~~~~~~~~~~~~
+..\Controller.c:291:6: warning: unused variable 'sueldo' [-Wunused-variable]
+  int sueldo;
+      ^~~~~~
+..\Controller.c:290:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:289:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+18:22:49 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:56:29: error: incompatible type for argument 1 of 'parser_EmployeeFromBinary'
+   parser_EmployeeFromBinary(pArchivo, pArrayListEmployee);
+                             ^~~~~~~~
+In file included from ..\Controller.c:5:0:
+..\parser.h:30:5: note: expected 'FILE {aka struct _iobuf}' but argument is of type 'FILE * {aka struct _iobuf *}'
+ int parser_EmployeeFromBinary(FILE pFile , LinkedList* pArrayListEmployee);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:48:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:267:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:266:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\Controller.c: In function 'controller_saveAsBinary':
+..\Controller.c:295:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:294:6: warning: unused variable 'cant' [-Wunused-variable]
+  int cant;
+      ^~~~
+..\Controller.c:293:7: warning: unused variable 'nombre' [-Wunused-variable]
+  char nombre[128];
+       ^~~~~~
+..\Controller.c:292:6: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+  int horasTrabajadas;
+      ^~~~~~~~~~~~~~~
+..\Controller.c:291:6: warning: unused variable 'sueldo' [-Wunused-variable]
+  int sueldo;
+      ^~~~~~
+..\Controller.c:290:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:289:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+18:22:59 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:56:29: error: incompatible type for argument 1 of 'parser_EmployeeFromBinary'
+   parser_EmployeeFromBinary(&pArchivo, pArrayListEmployee);
+                             ^
+In file included from ..\Controller.c:5:0:
+..\parser.h:30:5: note: expected 'FILE {aka struct _iobuf}' but argument is of type 'FILE ** {aka struct _iobuf **}'
+ int parser_EmployeeFromBinary(FILE pFile , LinkedList* pArrayListEmployee);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:48:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:267:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:266:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\Controller.c: In function 'controller_saveAsBinary':
+..\Controller.c:295:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:294:6: warning: unused variable 'cant' [-Wunused-variable]
+  int cant;
+      ^~~~
+..\Controller.c:293:7: warning: unused variable 'nombre' [-Wunused-variable]
+  char nombre[128];
+       ^~~~~~
+..\Controller.c:292:6: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+  int horasTrabajadas;
+      ^~~~~~~~~~~~~~~
+..\Controller.c:291:6: warning: unused variable 'sueldo' [-Wunused-variable]
+  int sueldo;
+      ^~~~~~
+..\Controller.c:290:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:289:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+18:29:24 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:48:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'controller_saveAsText':
+..\Controller.c:267:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:266:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+..\Controller.c: In function 'controller_saveAsBinary':
+..\Controller.c:295:12: warning: unused variable 'aux' [-Wunused-variable]
+  Employee* aux;
+            ^~~
+..\Controller.c:294:6: warning: unused variable 'cant' [-Wunused-variable]
+  int cant;
+      ^~~~
+..\Controller.c:293:7: warning: unused variable 'nombre' [-Wunused-variable]
+  char nombre[128];
+       ^~~~~~
+..\Controller.c:292:6: warning: unused variable 'horasTrabajadas' [-Wunused-variable]
+  int horasTrabajadas;
+      ^~~~~~~~~~~~~~~
+..\Controller.c:291:6: warning: unused variable 'sueldo' [-Wunused-variable]
+  int sueldo;
+      ^~~~~~
+..\Controller.c:290:6: warning: unused variable 'id' [-Wunused-variable]
+  int id;
+      ^~
+..\Controller.c:289:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+19:38:02 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:48:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+19:38:22 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:01:46 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_sortEmployee':
+..\Controller.c:253:6: warning: unused variable 'retorno' [-Wunused-variable]
+  int retorno=-1;
+      ^~~~~~~
+..\Controller.c: In function 'OrdenamientoPorNombre':
+..\Controller.c:370:10: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  retorno=strcmp(((Employee*)empleadoA)->nombre, ((Employee*)empleadoB)->nombre);  //declaro y casteo las variables de tipo empleado, luego las comparo
+          ^~~~~~
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:59:12: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+     return retorno;
+            ^~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:9: warning: unused variable 'tam' [-Wunused-variable]
+     int tam;
+         ^~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:06:59 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'OrdenamientoPorNombre':
+..\Controller.c:379:10: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  retorno=strcmp(((Employee*)empleadoA)->nombre, ((Employee*)empleadoB)->nombre);  //declaro y casteo las variables de tipo empleado, luego las comparo
+          ^~~~~~
+..\Controller.c: In function 'controller_loadFromBinary':
+..\Controller.c:59:12: warning: 'retorno' is used uninitialized in this function [-Wuninitialized]
+     return retorno;
+            ^~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:07:47 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'OrdenamientoPorNombre':
+..\Controller.c:380:10: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  retorno=strcmp(((Employee*)empleadoA)->nombre, ((Employee*)empleadoB)->nombre);  //declaro y casteo las variables de tipo empleado, luego las comparo
+          ^~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:08:24 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'OrdenamientoPorNombre':
+..\Controller.c:381:10: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  retorno=strcmp(((Employee*)empleadoA)->nombre, ((Employee*)empleadoB)->nombre);  //declaro y casteo las variables de tipo empleado, luego las comparo
+          ^~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:13:07 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:18:19 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:9: warning: unused variable 'tam' [-Wunused-variable]
+     int tam;
+         ^~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:18:31 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+00:20:09 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+00:22:14 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'mostrarEmpleado':
+..\Controller.c:381:7: warning: unused variable 'nombre' [-Wunused-variable]
+  char nombre[128];
+       ^~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+00:22:25 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+00:49:57 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:124:14: warning: 'aux' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    cantidad= fread(aux, sizeof(Employee), 1, pFile);
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:50:56 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:123:27: warning: passing argument 2 of 'fread' makes integer from pointer without a cast [-Wint-conversion]
+    cantidad= fread(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:734:41: note: expected 'size_t {aka unsigned int}' but argument is of type 'char *'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+..\parser.c:123:57: warning: passing argument 3 of 'fread' makes integer from pointer without a cast [-Wint-conversion]
+    cantidad= fread(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                                                         ^~~~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:734:41: note: expected 'size_t {aka unsigned int}' but argument is of type 'char *'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+..\parser.c:123:66: warning: passing argument 4 of 'fread' from incompatible pointer type [-Wincompatible-pointer-types]
+    cantidad= fread(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                                                                  ^~~~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:734:41: note: expected 'FILE * {aka struct _iobuf *}' but argument is of type 'char *'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+..\parser.c:123:14: error: too many arguments to function 'fread'
+    cantidad= fread(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+              ^~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:734:41: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+00:51:06 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:119:10: error: invalid operands to binary != (have 'FILE {aka struct _iobuf}' and 'void *')
+  if(pFile!=NULL && pArrayListEmployee!=NULL)
+          ^~
+In file included from ..\parser.c:1:0:
+..\parser.c:121:10: error: invalid type argument of '->' (have 'FILE {aka struct _iobuf}')
+   while(!feof(pFile))//hasta q no lea la ultima linea, no sale del while
+          ^
+..\parser.c:123:21: error: incompatible type for argument 1 of 'fscanf'
+    cantidad= fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", buffer1, buffer2, buffer3, buffer4);
+                     ^~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:666:41: note: expected 'FILE * {aka struct _iobuf *}' but argument is of type 'FILE {aka struct _iobuf}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  int    fscanf (FILE *, const char *, ...);
+                                         ^~~~~~
+00:51:18 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+00:51:29 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+00:59:43 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+01:10:29 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file tp3_windows.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:10:37 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+01:12:27 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file tp3_windows.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:12:31 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+01:19:32 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+01:21:13 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file tp3_windows.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:21:16 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+01:34:20 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:127:20: error: incompatible type for argument 1 of 'fread'
+    cantidad= fread(nuevoEmpleadoBinario, sizeof(Employee), 1, pFile);
+                    ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:734:41: note: expected 'void *' but argument is of type 'Employee {aka struct <anonymous>}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+..\parser.c:132:24: error: incompatible types when assigning to type 'Employee {aka struct <anonymous>}' from type 'Employee * {aka struct <anonymous> *}'
+    nuevoEmpleadoBinario=employee_newParametrosString(buffer1, buffer2, buffer3, buffer4);
+                        ^
+..\parser.c:133:31: error: incompatible type for argument 2 of 'll_add'
+    ll_add(pArrayListEmployee, nuevoEmpleadoBinario);
+                               ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\parser.c:3:0:
+..\LinkedList.h:41:5: note: expected 'void *' but argument is of type 'Employee {aka struct <anonymous>}'
+ int ll_add(LinkedList* this, void* pElement);
+     ^~~~~~
+01:34:25 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:127:20: error: incompatible type for argument 1 of 'fread'
+    cantidad= fread(nuevoEmpleadoBinario, sizeof(Employee), 1, pFile);
+                    ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\parser.c:1:0:
+c:\mingw\include\stdio.h:734:41: note: expected 'void *' but argument is of type 'Employee {aka struct <anonymous>}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  size_t fread (void *, size_t, size_t, FILE *);
+                                         ^~~~~
+..\parser.c:132:24: error: incompatible types when assigning to type 'Employee {aka struct <anonymous>}' from type 'Employee * {aka struct <anonymous> *}'
+    nuevoEmpleadoBinario=employee_newParametrosString(buffer1, buffer2, buffer3, buffer4);
+                        ^
+..\parser.c:133:31: error: incompatible type for argument 2 of 'll_add'
+    ll_add(pArrayListEmployee, nuevoEmpleadoBinario);
+                               ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\parser.c:3:0:
+..\LinkedList.h:41:5: note: expected 'void *' but argument is of type 'Employee {aka struct <anonymous>}'
+ int ll_add(LinkedList* this, void* pElement);
+     ^~~~~~
+01:35:04 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+01:35:10 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+01:42:18 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:129:57: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametrosString(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                         ^~
+..\parser.c:129:66: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametrosString(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                                  ^~
+..\parser.c:129:79: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametrosString(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                                               ^~
+..\parser.c:129:101: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametrosString(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                                                                     ^~
+01:43:05 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+..\parser.c: In function 'parser_EmployeeFromBinary':
+..\parser.c:129:51: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametros(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                   ^~
+..\parser.c:129:60: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametros(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                            ^~
+..\parser.c:129:73: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametros(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                                         ^~
+..\parser.c:129:95: error: invalid type argument of '->' (have 'Employee {aka struct <anonymous>}')
+    nuevoEmpleadoBinario=employee_newParametros(aux->id, aux->nombre, aux->horasTrabajadas, aux->sueldo);
+                                                                                               ^~
+01:44:28 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+Info: Nothing to build for tp3_windows
+02:31:48 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file tp3_windows.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+02:31:52 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
+02:34:01 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Lau\\Desktop\\tp3.2\\tp3_windows" -o tp3_windows.exe Aguirre.o Controller.o Employee.o main.o parser.o -lLinkedList 
