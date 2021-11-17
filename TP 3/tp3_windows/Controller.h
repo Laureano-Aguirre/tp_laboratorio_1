@@ -1,6 +1,6 @@
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee); //ok
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee);
-int controller_addEmployee(LinkedList* pArrayListEmployee); //ok
+int controller_addEmployee(LinkedList* pArrayListEmployee, int* idEmpleado); //ok
 int controller_editEmployee(LinkedList* pArrayListEmployee); //ok
 int controller_removeEmployee(LinkedList* pArrayListEmployee);
 int controller_ListEmployee(LinkedList* pArrayListEmployee);

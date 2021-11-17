@@ -118,7 +118,7 @@ int employee_getNombre(Employee* this,char* nombre)
 {
 	int retorno=0;
 
-	if(this!=NULL && nombre!=NULL && strlen(nombre)<128 && strlen(nombre)>0)
+	if(this!=NULL && nombre!=NULL && strlen(nombre)<128 && strlen(nombre)>=0)
 	{
 		strcpy(nombre, this->nombre);
 		retorno=1;

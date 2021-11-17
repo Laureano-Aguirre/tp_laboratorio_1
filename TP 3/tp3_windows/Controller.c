@@ -26,6 +26,7 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 		if(parser_EmployeeFromText(auxP, pArrayListEmployee)==1)
 		{
 			retorno=1;
+			puts("\nSe cargaron los datos correctamente");
 		}
 	}
 	else
@@ -68,10 +69,9 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_addEmployee(LinkedList* pArrayListEmployee)
+int controller_addEmployee(LinkedList* pArrayListEmployee, int* idEmpleado)
 {
 	int retorno=0;
-	int idEmpleado;
 	int horasTrabajadas;
 	char nombre[128];
 	int sueldo;
@@ -79,13 +79,12 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
 	if(pArrayListEmployee!=NULL)
 	{
-		idEmpleado=ll_len(pArrayListEmployee);
-		idEmpleado++;
-		printf("\nEl ID del empleado que va a cargar, es: %d", idEmpleado);
+		(*idEmpleado)++;
+		printf("\nEl ID del empleado que va a cargar, es: %d", *idEmpleado);
 		getString("\nIngrese el nombre del empleado que desea cargar: ", nombre);
 		getInt("\nIngrese las horas trabajadas que desea cargar: ", &horasTrabajadas);
 		getInt("\nIngrese el sueldo del empleado que desea cargar: ", &sueldo);
-		nuevoEmpleado=employee_newParametros(idEmpleado, nombre, horasTrabajadas, sueldo);
+		nuevoEmpleado=employee_newParametros(*idEmpleado, nombre, horasTrabajadas, sueldo);
 		if(nuevoEmpleado!=NULL)
 		{
 			ll_add(pArrayListEmployee, nuevoEmpleado);
@@ -136,14 +135,17 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 					case 1:
 						getString("\nIngrese el nombre nuevo: ", auxNombre);
 						employee_setNombre(pEmpleado, auxNombre);
+						retorno=1;
 						break;
 					case 2:
 						getInt("\nIngrese el nuevo sueldo: ", &auxSueldo);
 						employee_setSueldo(pEmpleado, auxSueldo);
+						retorno=1;
 						break;
 					case 3:
 						getInt("\nIngrese las nuevas horas de trabajo: ", &auxHorasTrabajadas);
 						employee_setHorasTrabajadas(pEmpleado, auxHorasTrabajadas);
+						retorno=1;
 						break;
 				}
 			}
@@ -198,6 +200,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 				}
 				if(opcion==1)
 				{
+					ll_remove(pArrayListEmployee, pos);
 					free(pEmpleado);
 					puts("\nEmpleado borrado exitosamente!");
 					retorno=1;
@@ -206,6 +209,10 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 				{
 					puts("\nOperacion cancelada.");
 				}
+			}
+			else
+			{
+				puts("\nNo se pudo encontrar a un empleado con ese ID.");
 			}
 		}
 		else
@@ -267,26 +274,29 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 	{
 		if(ll_len(pArrayListEmployee)>0)
 		{
-			getInt("\nIngrese que desea ordenar (1.nombre 2.sueldo 3.horas trabajadas, entero): ", &opcion);
+			getInt("\nIngrese que desea ordenar (1.nombre 2.sueldo 3.horas trabajadas): ", &opcion);
 			while(opcion!=1 && opcion !=2 && opcion!=3)
 			{
-				getInt("\nError, ingrese que desea ordenar (1.nombre 2.sueldo 3.horas trabajadas, entero): ", &opcion);
+				getInt("\nError, ingrese que desea ordenar (1.nombre 2.sueldo 3.horas trabajadas): ", &opcion);
 			}
 			switch(opcion)
 			{
 				case 1:
+					puts("\nOrdenando...");
 					if(ll_sort(pArrayListEmployee, OrdenamientoPorNombre, 1)==0)	//le paso a la funcion sort, encargada de hacer el swapeo, la lista, la funcion retornando
 					{
 						retorno=1;
 					}
-					break;													//el valor de la comparacion, y el tipo de ordenamiento (1 descendente)
+					break;													//el valor de la comparacion, y el tipo de ordenamiento (1 ascendente)
 				case 2:
+					puts("\nOrdenando...");
 					if(ll_sort(pArrayListEmployee, OrdenamientoPorSueldo, 1)==0)
 					{
 						retorno=1;
 					}
 					break;
 				case 3:
+					puts("\nOrdenando...");
 					if(ll_sort(pArrayListEmployee, OrdenamientoPorHsTrabajadas, 1)==0)
 					{
 						retorno=1;
@@ -390,15 +400,15 @@ void mostrarEmpleado(LinkedList* pArrayListEmployee, int index)
 	int horasTrabajadas;
 	int sueldo;
 	int id;
-	//char nombre[128];
+	char nombre[128];
 
 	empleado=(Employee*)ll_get(pArrayListEmployee, index);
 	employee_getHorasTrabajadas(empleado, &horasTrabajadas);
 	employee_getSueldo(empleado, &sueldo);
-	//employee_getNombre(empleado, nombre);
+	employee_getNombre(empleado, nombre);
 	employee_getId(empleado, &id);
 
-	printf("\nID: %d  ----  nombre: %s  ----  sueldo: %d  ----  horas trabajadas: %d", id, empleado->nombre, sueldo, horasTrabajadas);
+	printf("\nID: %d  ----  nombre: %s  ----  sueldo: %d  ----  horas trabajadas: %d", id, nombre, sueldo, horasTrabajadas);
 
 }
 
@@ -406,7 +416,7 @@ int OrdenamientoPorNombre(void* empleadoA, void* empleadoB)
 {
 	int retorno=0;
 
-	retorno=strcmp(((Employee*)empleadoA)->nombre, ((Employee*)empleadoB)->nombre);		//declaro y casteo las variables de tipo empleado, luego las comparo
+	retorno=strcmp(((Employee*)empleadoA)->nombre, ((Employee*)empleadoB)->nombre);		// casteo las variables de tipo empleado, luego las comparo
 
 	return retorno;
 }
