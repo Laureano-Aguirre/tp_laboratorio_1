@@ -27,7 +27,12 @@ int main()
 {
 	setbuf(stdout, NULL);
     int option = 0;
+    int resp;
+    int idEmp;
+    int retornoCargaTexto=-1;
+    int retornoCargaBinario=-1;
 
+    Employee* empleado;
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
 
@@ -47,22 +52,84 @@ int main()
         switch(option)
         {
             case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
+            	puts("\nUsted ha elegido la opcion cargar los datos de los empleados desde el archivo data.csv (en modo texto).");
+            	if(retornoCargaTexto==-1 && retornoCargaBinario==-1)
+            	{
+            		controller_loadFromText("data.csv",listaEmpleados);
+            		retornoCargaTexto=1;
+            		empleado=(Employee*)ll_get(listaEmpleados,ll_len(listaEmpleados)-1 );
+            		employee_getId(empleado, &idEmp);
+            	}
+            	else if(retornoCargaTexto==1 || retornoCargaBinario==1)
+            	{
+            		getInt("\nYa hay una lista cargada, desea sobreescribirla? 1.si 2.no: ", &resp);
+            		while(resp!=1 && resp!=2)
+            		{
+            			getInt("\nError, ya hay una lista cargada, desea sobreescribirla? 1.si 2.no: ", &resp);
+            		}
+            		if(resp==1)
+            		{
+            			ll_clear(listaEmpleados);
+            			controller_loadFromText("data.csv",listaEmpleados);
+            			retornoCargaTexto=1;
+            			empleado=(Employee*)ll_get(listaEmpleados,ll_len(listaEmpleados)-1 );
+            			employee_getId(empleado, &idEmp);
+            		}
+            		else
+            		{
+            			puts("\nOperacion cancelada.");
+            		}
+            	}
+
                 break;
             case 2:
             	puts("\nUsted ha elegido la opcion cargar los datos de los empleados desde el archivo data.csv (en modo binario).");
-            	controller_loadFromBinary("data.bin", listaEmpleados);
+            	if(retornoCargaTexto==-1 && retornoCargaBinario==-1)
+            	{
+            		controller_loadFromBinary("data.bin", listaEmpleados);
+            		retornoCargaBinario=1;
+            		empleado=(Employee*)ll_get(listaEmpleados,ll_len(listaEmpleados)-1 );
+            		employee_getId(empleado, &idEmp);
+            	}
+            	else if(retornoCargaTexto==1 || retornoCargaBinario==1)
+            	{
+            		getInt("\nYa hay una lista cargada, desea sobreescribirla? 1.si 2.no: ", &resp);
+            		while(resp!=1 && resp!=2)
+            		{
+            			getInt("\nError, ya hay una lista cargada, desea sobreescribirla? 1.si 2.no: ", &resp);
+            		}
+            		if(resp==1)
+            		{
+            			ll_clear(listaEmpleados);
+            			controller_loadFromBinary("data.bin", listaEmpleados);
+            			retornoCargaBinario=1;
+            			empleado=(Employee*)ll_get(listaEmpleados,ll_len(listaEmpleados)-1 );
+            			employee_getId(empleado, &idEmp);
+            		}
+            		else
+            		{
+            			puts("\nOperacion cancelada.");
+            		}
+            	}
             	break;
             case 3:
             	puts("\nUsted ha seleccionado la opcion Alta empleado.");
-            	if(controller_addEmployee(listaEmpleados)==1)
+            	if(retornoCargaTexto==1 || retornoCargaTexto==1)
             	{
-            		puts("\nEmpleado cargado correctamente.");
+            		if(controller_addEmployee(listaEmpleados, &idEmp)==1)
+            		{
+            			puts("\nEmpleado cargado correctamente.");
+            		}
+            		else
+            		{
+            			puts("\nNo se pudo cargar el empleado.");
+            		}
             	}
             	else
             	{
-            		puts("\nNo se pudo cargar el empleado.");
+            		puts("\nError, primero debe cargar el archivo del sistema para dar de alta a un empleado.");
             	}
+
             	break;
             case 4:
             	puts("\nUsted ha elegido la opcion modificar datos de empleado.");

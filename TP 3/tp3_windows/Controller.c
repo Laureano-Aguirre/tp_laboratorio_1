@@ -26,6 +26,7 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 		if(parser_EmployeeFromText(auxP, pArrayListEmployee)==1)
 		{
 			retorno=1;
+			puts("\nDatos cargados correctamente.");
 		}
 	}
 	else
@@ -68,10 +69,9 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_addEmployee(LinkedList* pArrayListEmployee)
+int controller_addEmployee(LinkedList* pArrayListEmployee,int* idEmpleado)
 {
 	int retorno=0;
-	int idEmpleado;
 	int horasTrabajadas;
 	char nombre[128];
 	int sueldo;
@@ -79,13 +79,12 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
 	if(pArrayListEmployee!=NULL)
 	{
-		idEmpleado=ll_len(pArrayListEmployee);
-		idEmpleado++;
-		printf("\nEl ID del empleado que va a cargar, es: %d", idEmpleado);
+		(*idEmpleado)++;
+		printf("\nEl ID del empleado que va a cargar, es: %d", *idEmpleado);
 		getString("\nIngrese el nombre del empleado que desea cargar: ", nombre);
 		getInt("\nIngrese las horas trabajadas que desea cargar: ", &horasTrabajadas);
 		getInt("\nIngrese el sueldo del empleado que desea cargar: ", &sueldo);
-		nuevoEmpleado=employee_newParametros(idEmpleado, nombre, horasTrabajadas, sueldo);
+		nuevoEmpleado=employee_newParametros(*idEmpleado, nombre, horasTrabajadas, sueldo);
 		if(nuevoEmpleado!=NULL)
 		{
 			ll_add(pArrayListEmployee, nuevoEmpleado);
@@ -394,15 +393,15 @@ void mostrarEmpleado(LinkedList* pArrayListEmployee, int index)
 	int horasTrabajadas;
 	int sueldo;
 	int id;
-	//char nombre[128];
+	char nombre[128];
 
 	empleado=(Employee*)ll_get(pArrayListEmployee, index);
 	employee_getHorasTrabajadas(empleado, &horasTrabajadas);
 	employee_getSueldo(empleado, &sueldo);
-	//employee_getNombre(empleado, nombre);
+	employee_getNombre(empleado, nombre);
 	employee_getId(empleado, &id);
 
-	printf("\nID: %d  ----  nombre: %s  ----  sueldo: %d  ----  horas trabajadas: %d", id, empleado->nombre, sueldo, horasTrabajadas);
+	printf("\nID: %d  ----  nombre: %s  ----  sueldo: %d  ----  horas trabajadas: %d", id, nombre, sueldo, horasTrabajadas);
 
 }
 
